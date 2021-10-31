@@ -2,13 +2,25 @@
 各インスタンスの作成メモ  
 コマンドラインベースで作成できるように記載する
 
+* ### Serverless VPC
+  * CloudRunなどのGCPコンポーネント間の通信をプライベートで行うためのVPCポリシー
+  * 作成方法  
+    `gcloud compute networks vpc-access connectors \  
+    create CONNECTOR_NAME \ 
+    --region REGION \ 
+    --subnet SUBNET \ 
+    --subnet-project HOST_PROJECT_ID \  
+    --min-instances MIN \ 
+    --max-instances MAX \ 
+    --machine-type MACHINE_TYPE`  
+
 * ### VPC Service Connectors
-  *概要
+  * 概要  
     組織単位で制御できるAPIへのアクセス制御機能
     悪意のある開発者が外部のストレージへデータを持ち出すことを、
     変更不可能な組織の権限で制御できる  
 
-  *イメージ図
+  * イメージ図  
   <img src="./img/スクリーンショット 2021-10-29 13.49.42.png">
 
   *参考リンク

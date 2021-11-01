@@ -1,0 +1,4 @@
+# source ~/.zshrc
+alias ll='ls -al'
+alias g='git'
+alias sccap='defaults write com.apple.screencapture location'

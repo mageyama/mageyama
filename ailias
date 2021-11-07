@@ -1,3 +1,4 @@
+# vim ~/.zshrc
 # source ~/.zshrc
 alias ll='ls -al'
 alias g='git'
